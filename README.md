@@ -1,0 +1,2 @@
+# fullApi
+universal Api function
