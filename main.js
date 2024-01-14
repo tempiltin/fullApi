@@ -25,3 +25,33 @@ class FullApi {
 }
 
 export default FullApi;
+
+
+
+//UCE()#################################################################################################
+
+
+
+
+const api = new FullApi('https://api.mysite.com');
+
+// GET so'rovi
+api.get('/users')
+   .then(response => console.log(response.data))
+   .catch(error => console.error(error));
+
+// POST so'rovi
+api.post('/users', { name: 'John Doe' })
+   .then(response => console.log(response.data))
+   .catch(error => console.error(error));
+
+// PUT so'rovi
+api.put('/users/1', { name: 'Jane Doe' })
+   .then(response => console.log(response.data))
+   .catch(error => console.error(error));
+
+// DELETE so'rovi
+api.delete('/users/1')
+   .then(response => console.log(response.data))
+   .catch(error => console.error(error));
+
